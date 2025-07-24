@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Love 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffe0f5);
+      color: #333;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #ff69b4;
+    }
+
+    .letter {
+      background: #fff0fa;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+    }
+
+    .slideshow {
+      margin: 20px auto;
+      max-width: 320px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+    }
+
+    .slideshow img {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    .slideshow img.active {
+      display: block;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #ff69b4;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
+    }
+
+    .hidden-msg {
+      display: none;
+      margin-top: 20px;
+      background: #ffe6f0;
+      padding: 15px;
+      border-radius: 15px;
+      color: #555;
+      font-size: 1.1em;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <h1>For My Love 💖</h1>
+
+  <div class="letter">
+    <p>Hi Mahal ko,</p>
+    <p>I made this little site just for you.  
+    Every time I look at your smile, I remember why I hold on because you’re worth every second.  
+    We’ve had our ups and downs, but I never stop choosing you.</p>
+    <p>This is a small gift, but I hope it makes you feel how much I care.  
+    Thank you for being my person. I love you.</p>
+  </div>
+
+  <div class="slideshow">
+    <img src="ky.jpg" class="active" />
+    <img src="kyla.jpg" />
+    <img src="loves.jpg" />
+  </div>
+
+  <button onclick="reveal()">Click me 💬</button>
+  <div class="hidden-msg" id="message">
+    You’re my peace, my chaos, and my home.  
+    I don’t say it enough, but I’m grateful for you — every moment, every fight, every hug.  
+    I’m here. Always.<br><br>
+
+    Mahal, I know we have differences. I hope na maisip mo rin yung nararamdaman ko — it’s not sumbat, it’s me reminding you that I have feelings too.  
+    I really love you. I’m not saying you have to do everything I do for you, but minsan remind yourself na I deserve love and care rin.  
+    These past weeks, I know may struggles ka and I’ve been here supporting you every moment.  
+    I hope this helps us grow as people and understand each other even deeper.<br><br>
+
+    Baket ko I love you so much. 💖
+  </div>
+  
+   <div class="music-player">
+    <iframe width="100%" height="80" scrolling="no" frameborder="no"
+      allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/user-270361878/aerosmith-i-dont-wanna-miss-a-thing&color=%23ff69b4&auto_play=true&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+    </iframe>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll(".slideshow img");
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }, 3000);
+
+    function reveal() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
