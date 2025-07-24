@@ -29,23 +29,33 @@
       margin: 0 auto 30px auto;
     }
 
-    .slideshow {
-      margin: 20px auto;
-      max-width: 320px;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
-    }
+   .slideshow {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3 / 4; /* Set consistent aspect ratio */
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+}
 
-    .slideshow img {
-      width: 100%;
-      height: auto;
-      display: none;
-    }
+.slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: none;
+  transition: opacity 0.5s ease;
+}
 
-    .slideshow img.active {
-      display: block;
-    }
+.slideshow img.active {
+  display: block;
+  opacity: 1;
+}
+
 
     button {
       margin-top: 20px;
